@@ -16,7 +16,7 @@ A form where users can specify preferences for college features such as:
 ### 2) Machine Learning Model
 The model ranks colleges based on the weighted preferences set by the user.
 
-### 2) College Recommendations
+### 3) College Recommendations
 The top 10 colleges that match the user’s criteria are displayed on the results page.
 
 ## Dataset
