@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Colleges</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            font-size: 28px;
+        }
+        .college-card {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            width: 70%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .college-card img {
+            max-width: 80px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .college-card a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .college-card a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Colleges Based on Your Preferences</h1>
+
+    <div class="container">
+        {% for college in top_colleges %}
+        <div class="college-card">
+            <img src="{{ college['Image_URL'] }}" alt="{{ college['College_Name'] }} Image">
+            <!-- Link the university name to a specific URL for each university -->
+            <a href="/college/{{ college['College_Name'] }}">{{ college['College_Name'] }}</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="/" class="back-link">Go Back to Preferences</a>
+</body>
+</html>

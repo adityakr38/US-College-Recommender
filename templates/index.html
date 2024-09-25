@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Preferences</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: white;
+            padding: 40px; /* Increased padding for a bigger feel */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Increased width */
+            max-width: 900px; /* Allow a wider form */
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px; /* Larger font size for the title */
+            margin-bottom: 30px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 12px; /* Increased margin for better spacing */
+            font-weight: 500;
+            font-size: 18px; /* Larger font size for labels */
+        }
+        .slider-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px; /* Increased spacing between inputs */
+        }
+        .slider {
+            width: 100%;
+        }
+        .slider-container label {
+            width: 60%;
+        }
+        .slider-container output {
+            width: 50px; /* Increased width for value */
+            text-align: right;
+            font-size: 16px; /* Larger font for values */
+        }
+        .submit-btn {
+            text-align: center;
+            margin-top: 30px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px; /* Bigger button */
+            border: none;
+            border-radius: 5px;
+            font-size: 18px; /* Larger font size for the button */
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <h1>College Preferences</h1>
+        
+        <div class="slider-container">
+            <label for="admission_rate">Admission Rate:</label>
+            <input type="range" id="admission_rate" name="admission_rate" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="in_state_tuition">In-State Tuition:</label>
+            <input type="range" id="in_state_tuition" name="in_state_tuition" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="out_state_tuition">Out-of-State Tuition:</label>
+            <input type="range" id="out_state_tuition" name="out_state_tuition" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="student_size">Student Size:</label>
+            <input type="range" id="student_size" name="student_size" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="sat_score">Average SAT Score:</label>
+            <input type="range" id="sat_score" name="sat_score" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="median_earnings">Median Earnings 10 Years After:</label>
+            <input type="range" id="median_earnings" name="median_earnings" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="completion_rate">Completion Rate:</label>
+            <input type="range" id="completion_rate" name="completion_rate" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="slider-container">
+            <label for="pell_grant_rate">Pell Grant Rate:</label>
+            <input type="range" id="pell_grant_rate" name="pell_grant_rate" min="0.00" max="1.00" step="0.01" class="slider" oninput="this.nextElementSibling.value = this.value">
+            <output>0.50</output>
+        </div>
+
+        <div class="submit-btn">
+            <input type="submit" value="Submit Preferences">
+        </div>
+    </form>
+</body>
+</html>
