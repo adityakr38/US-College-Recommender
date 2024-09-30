@@ -82,7 +82,7 @@ Three machine learning models were trained and evaluated using the dataset:
 
 ```bash
 Model	              MSE	      MAE	     R2_Score
-XGBoost	            17.537856	4.113250    -1001.401
+XGBoost	          17.537856	4.113250  -1001.401
 Gradient Boosting	0.000235	0.010672	0.986550
 Random Forest	    0.000712	0.020346	0.959278
 ```
